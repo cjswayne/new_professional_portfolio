@@ -15,7 +15,7 @@ $green:#CCFFCB;
   color: #1a1a1a;
   background-color: $lightGreen;
 
-  font-synthesis: none;
+  font-synthesis: none; 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,7 +26,7 @@ main{
 }
 
 header, footer{
-  color:red;
+  color:white;
   background-color: $blue;
   align-items: center;
   justify-content: space-between;
@@ -76,13 +76,13 @@ button:focus-visible {
 
 form{
   margin:auto;
+  color:black;
   > *:not(button){
     margin-bottom:10px;
     outline:none;
     background:$green;
     padding: 5px 10px;
     border:1px solid $darkBlue;
-    color:black;
   }
 }
 
@@ -93,6 +93,10 @@ nav > a {
   &:hover{
     color:black;
   } 
+}
+
+.mA{
+  margin:auto;
 }
 
 .logoName{
