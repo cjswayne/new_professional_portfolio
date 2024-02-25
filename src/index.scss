@@ -15,7 +15,7 @@ $green:#CCFFCB;
   color: #1a1a1a;
   background-color: $lightGreen;
 
-  font-synthesis: none; 
+  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,7 +26,7 @@ main{
 }
 
 header, footer{
-  color:white;
+  color:red;
   background-color: $blue;
   align-items: center;
   justify-content: space-between;
@@ -82,6 +82,7 @@ form{
     background:$green;
     padding: 5px 10px;
     border:1px solid $darkBlue;
+    color:black;
   }
 }
 
@@ -92,10 +93,6 @@ nav > a {
   &:hover{
     color:black;
   } 
-}
-
-.mA{
-  margin:auto;
 }
 
 .logoName{
@@ -123,5 +120,272 @@ nav > a {
 @media(max-width:480px){
   header{
     flex-wrap: wrap;
+  }
+}
+
+/* GENERAL STYLES */
+.row {
+  flex-direction: row;
+}
+
+.flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.container-padding {
+  padding: 5px 15%;
+}
+
+.has-padding {
+  padding: 20px;
+}
+
+.has-padding-left {
+  padding-left: 20px;
+}
+
+.has-padding-right {
+  padding-right: 20px;
+}
+
+.has-padding-bottom {
+  padding-bottom: 20px;
+}
+
+.has-padding-top {
+  padding-top: 20px;
+}
+
+.has-margin-top {
+  margin-top: 20px;
+}
+
+.has-margin-right{
+  margin-right:20px;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.half-width {
+  width: calc(50% - 28px);
+}
+
+.whole-width {
+  width: 100%;
+}
+
+.text-nowrap {
+  text-wrap: nowrap;
+}
+
+
+/*  MAIN SECTION STYLES  */
+
+/* About Me */
+.about-me-padding {
+  padding: 0px 3% 20px;
+}
+
+.about-me-image {
+  border-radius: 5px;
+}
+
+.skill-text h4,
+.skill-text h3 {
+  margin-bottom: 0;
+}
+
+.skill-text img {
+  max-width: 200px;
+}
+
+/* My Work */
+.project-card {
+  position: relative;
+  margin: 10px;
+  border: 4px solid #1A8BFF;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.project-card img {
+  object-fit: cover;
+  max-width: 100%;
+  z-index: -2;
+  position: relative;
+}
+
+.project-card:hover .image-wrap {
+  filter: blur(0px);
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+.project-card:hover .project-card-text {
+  filter: blur(0.05px);
+  transition: 0.3s;
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+
+.project-card-text p,
+.project-card-text a {
+  margin: 5px 0px 10px;
+}
+
+.project-card-text p {
+  opacity: 0.8;
+  font-size: .7em;
+}
+
+.project-card-text h2,
+.project-card-text h3 {
+  margin: 5px 0px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
+
+.project-card-text {
+  max-width: fit-content;
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  background-color: #24ADFF;
+  padding-top: 10px;
+  min-width: 250px;
+  border-radius: 5px;
+  filter: blur(0px);
+  transition: 0.3s;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.image-wrap {
+  position: relative;
+  display: inline-block;
+  filter: blur(2px);
+  transition: 0.3s;
+  transform: scale(1);
+
+}
+
+.image-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #CCE4FF;
+  opacity: 0.5;
+
+  z-index: -1;
+}
+
+/* FOOTER STYLES */
+.my-name {
+  font-size: .8em;
+  color: #AAA;
+}
+
+@media(max-width:798px) {
+  .about-me-image {
+      width: 100%;
+  }
+
+  .about-me-padding .half-width {
+      width: 100%;
+  }
+
+  .order-mobile {
+      flex-direction: column-reverse;
+  }
+
+  #about-me,
+  #contact-me {
+      margin-bottom: 0;
+  }
+
+  .contact-me-mobile .row {
+      flex-direction: row;
+      margin-bottom: 20px;
+  }
+
+  .top-bar h1,
+  .top-bar img {
+      padding: 0;
+  }
+
+  .top-bar {
+      padding-bottom: 15px;
+  }
+
+}
+
+/* MEDIA QUERIES   */
+
+@media (max-width: 1200px) {
+  .container-padding {
+      padding: 5px 5%;
+  }
+}
+
+@media (max-width: 798px) {
+  .row,
+  header {
+      flex-direction: column;
+  }
+
+  .has-margin-top {
+      margin: 0;
+  }
+
+  .has-padding {
+      padding-bottom: 0px;
+  }
+
+  .project .half-width,
+  .project .whole-width {
+      width: 92%;
+  }
+
+  .align-left-mobile {
+      align-items: start;
+  }
+
+  .align-end-mobile {
+      align-items: end;
+  }
+
+  .padding-left-mobile {
+      padding-left: 20px;
+
+      padding-right: 0px;
   }
 }

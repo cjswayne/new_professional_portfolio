@@ -1,4 +1,4 @@
-function Contact( ){
+function Contact({redirect}){
     return (
         <>
         <h1 className="tc">Contact Me</h1>
@@ -8,7 +8,7 @@ function Contact( ){
             <input name="name" type="text" placeholder="Full Name"/>
             <input name="email" type="text" placeholder="Email"/>
             <textarea name="message" placeholder="Message"cols="30" rows="10"></textarea>
-            <input type="hidden" name="redirect" value=""/>
+            <input type="hidden" name="redirect" value={redirect}/>
             
             <button>Send</button>
         </form>
